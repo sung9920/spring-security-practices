@@ -22,5 +22,7 @@ public class RealFilter extends GenericFilterBean {
 		((HttpServletResponse)response).addCookie(cookie);
 
 		chain.doFilter(request, response);
+		
+		
 	}
 }
