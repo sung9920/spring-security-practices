@@ -1,0 +1,17 @@
+package controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MvcController {
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
+    
+    @GetMapping("/user/login")
+    public String login() {
+    	return "this is login form";
+    }
+}
