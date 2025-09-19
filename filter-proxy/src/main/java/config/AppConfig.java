@@ -8,7 +8,7 @@ import jakarta.servlet.Filter;
 
 @Configuration
 public class AppConfig {
-	
+
 	@Bean
 	public Filter realFilter() {
 		return new RealFilter();
