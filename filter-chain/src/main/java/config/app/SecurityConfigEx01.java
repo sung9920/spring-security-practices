@@ -29,6 +29,7 @@ public class SecurityConfigEx01 {
 						String uri = request.getRequestURI().replaceAll(request.getContextPath(), "");
 						return new AntPathMatcher().match("/hello/**", uri);
 					}
+					
 					@Override
 					public List<Filter> getFilters() {
 						return Arrays.asList(securityFilterEx01(), securityFilterEx02());

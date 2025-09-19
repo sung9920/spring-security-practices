@@ -26,6 +26,8 @@ public class SecurityConfigEx02 {
 	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Throwable {
-		return http.build();
+		return http
+				
+				.build();
 	}
 }
