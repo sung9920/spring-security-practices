@@ -2,12 +2,10 @@ package config.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
-import org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
@@ -35,9 +33,9 @@ public class SecurityConfigEx01 {
 //				}
 //        	});
 
-      http
-    	.formLogin(formLogin -> {
-    	});
+    	http
+    		.formLogin(formLogin -> {
+    		});
 
     	return http.build();
     }

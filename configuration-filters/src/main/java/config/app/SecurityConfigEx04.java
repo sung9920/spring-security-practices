@@ -26,6 +26,15 @@ public class SecurityConfigEx04 {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+    	.formLogin(fromLogin -> {})
+    	.authorizeHttpRequests(authorizeRequest -> {
+    		/* ACL */
+    		authorizeRequest
+    			.anyRequest().authenticated();
+
+    	});
+
     	return http.build();
     }
 }
